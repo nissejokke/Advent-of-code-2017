@@ -137,7 +137,6 @@ class Grid {
         let trail = [];
         while ((pos = this.getNextUsedPos())) {
 
-            let visited = {};
             this.groups++;
             trail.push(pos);
             pos = { ...pos };
