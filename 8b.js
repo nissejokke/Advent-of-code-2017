@@ -999,12 +999,6 @@ vv inc -878 if cto <= -1896
 or inc 190 if gnz > 3765
 l dec 367 if uix >= -3376`;
 
-// input = `b inc 5 if a > 1
-// a inc 1 if b < 5
-// c dec -10 if a >= 1
-// c inc -20 if c == 10`;
-
-
 let regs = {};
 let instructions = input.split(/\n/)
     .map(row => {
@@ -1022,8 +1016,6 @@ let instructions = input.split(/\n/)
 
     });
 
-
-//console.log(instructions)
 let realmax = -111110;
 instructions.map(instr => {
     eval(instr);
@@ -1032,6 +1024,4 @@ instructions.map(instr => {
         realmax = max;
 })
 eval(instructions);
-//console.log(regs);
-
-console.log(realmax)
+console.log(realmax);
